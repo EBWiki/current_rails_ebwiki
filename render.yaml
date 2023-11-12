@@ -13,9 +13,21 @@ services:
           name: ebwiki-redis
     region: oregon
 
-databases:
-  - name: ebwiki-postgres
-    type: postgres
+  # Redis 1 - all fields defined
+  - type: redis
+    name: redis_ebwiki
+    ipAllowList: # required - allow external connections from only these CIDR blocks
+      - source: 24.187.55.144
+        description: office
+    region: oregon # optional (defaults to oregon)
+    plan: f # optional (defaults to starter instance type)
+    previewPlan: starter # optional (defaults to the value specified by 'plan')
+    maxmemoryPolicy: allkeys-lru # optional (defaults to allkeys-lru)
 
-  - name: ebwiki-redis
-    type: redis
+
+databases:
+  - name: ebwiki
+    type: postgres
+    databaseName: ebwiki-production # optional (Render may add a suffix)
+    ipAllowList: [] # only allow internal connections
+
