@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: current_rails_ebwiki
+    env: ruby
+    buildCommand: "bundle install && rake db:migrate"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ebwiki-postgres
+      - key: REDIS_URL
+        fromDatabase:
+          name: ebwiki-redis
+    region: oregon
+
+databases:
+  - name: ebwiki-postgres
+    type: postgres
+
+  - name: ebwiki-redis
+    type: redis
