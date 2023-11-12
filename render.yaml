@@ -10,7 +10,7 @@ services:
           name: ebwiki_production
       - key: REDIS_URL
         fromDatabase:
-          name: ebwiki-redis
+          name: redis-ebwiki
     region: oregon
 
   # Redis 1 - all fields defined
