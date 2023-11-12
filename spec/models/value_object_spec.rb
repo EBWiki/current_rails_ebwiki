@@ -19,7 +19,7 @@ describe ValueObject do
 
   describe '#==' do
     # We mock the to_s method to allow us to test the equality of two value
-    before { allow(subject).to receive(:to_s) { 'foo' } }
+    before { allow(subject).to receive(:to_s).and_return('foo') }
 
     it 'should return true if the objects are equal' do
       expect(subject == subject).to be(true)
