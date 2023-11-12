@@ -7,7 +7,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: ebwiki-postgres
+          name: ebwiki_production
       - key: REDIS_URL
         fromDatabase:
           name: ebwiki-redis
@@ -21,12 +21,11 @@ services:
         description: office
     region: oregon # optional (defaults to oregon)
     plan: free # optional (defaults to starter instance type)
-    previewPlan: starter # optional (defaults to the value specified by 'plan')
     maxmemoryPolicy: allkeys-lru # optional (defaults to allkeys-lru)
 
 
 databases:
-  - name: ebwiki
+  - name: ebwiki_production
     databaseName: ebwiki_7_production # optional (Render may add a suffix)
     ipAllowList: [] # only allow internal connections
 
