@@ -53,7 +53,7 @@ group :development, :test do
   gem 'mock_redis'
   gem 'rake', require: false
   gem 'rspec-rails'
-  gem 'rubocop'
+  gem 'rubocop', require: false
 end
 
 group :development do
@@ -70,7 +70,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner-active_record'
   gem 'launchy'
   gem 'selenium-webdriver'
