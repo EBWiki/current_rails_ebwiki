@@ -45,6 +45,10 @@ gem 'bootsnap', require: false
 gem 'brakeman'
 gem 'bundler-audit'
 
+
+gem 'bootstrap', '~> 5.1'
+gem 'jquery-rails', '~> 4.4'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
