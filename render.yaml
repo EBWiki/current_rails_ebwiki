@@ -9,8 +9,10 @@ services:
         fromDatabase:
           name: ebwiki_production
       - key: REDIS_URL
-        fromDatabase:
+        fromService:
+          type: redis
           name: redis-ebwiki
+          property: connectionString
     region: oregon
 
   # Redis 1 - all fields defined
