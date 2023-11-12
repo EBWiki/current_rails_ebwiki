@@ -1,0 +1,10 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'config/environments/*'
+Style/Documentation:
+  Enabled: false
+
+Lint/BinaryOperatorWithIdenticalOperands:
+  Enabled: false
+
