@@ -27,7 +27,6 @@ services:
 
 databases:
   - name: ebwiki
-    type: postgres
     databaseName: ebwiki-production # optional (Render may add a suffix)
     ipAllowList: [] # only allow internal connections
 
