@@ -27,6 +27,6 @@ services:
 
 databases:
   - name: ebwiki
-    databaseName: ebwiki-production # optional (Render may add a suffix)
+    databaseName: ebwiki_7_production # optional (Render may add a suffix)
     ipAllowList: [] # only allow internal connections
 
