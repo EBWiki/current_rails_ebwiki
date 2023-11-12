@@ -20,7 +20,7 @@ services:
       - source: 24.187.55.144
         description: office
     region: oregon # optional (defaults to oregon)
-    plan: frees # optional (defaults to starter instance type)
+    plan: free # optional (defaults to starter instance type)
     previewPlan: starter # optional (defaults to the value specified by 'plan')
     maxmemoryPolicy: allkeys-lru # optional (defaults to allkeys-lru)
 
