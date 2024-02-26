@@ -82,3 +82,20 @@ if State.count.zero?
     State.create(state)
   end
 end
+
+if Ethnicity.count.zero?
+  puts 'Creating Ethnicities...'
+  ethnicities = [
+    ['Black'],
+    ['White'],
+    ['Hispanic'],
+    ['Native American'],
+    ['Asian'],
+    ['Arabic'],
+    ['Pacific Islander']
+  ]
+
+  ethnicities.each do |ethnicity|
+    Ethnicity.create(title: ethnicity[0])
+  end
+end
