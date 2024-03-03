@@ -39,4 +39,8 @@ config/database.yml
 /app/assets/builds/*
 !/app/assets/builds/.keep
 
+# Jetbrains IDE
+.idea
+
+# NodeJS modules
 /node_modules
