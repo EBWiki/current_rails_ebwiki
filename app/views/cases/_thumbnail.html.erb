@@ -1,0 +1,11 @@
+<div class="view view-first">
+  <div class="thumbnail text-center">
+    <%= image_tag("default-user-icon.png", :class => "img-responsive") %>
+    <div class="caption">
+      <h4><%= this_case.title %></h4>
+    </div>
+  </div>
+  <div class="mask">
+    <h2><%= link_to this_case.title, this_case, :class => "info2" %></h2>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="col-md-3">
+  <div id='front-sidebar'>
+    <h4 class='side-leader'>Recently Updated</h4>
+    <table class='table leader-list'>
+      <tr>
+        <th>Case</th>
+        <th>Updated</th>
+      </tr>
+
+      <% @recently_updated_cases.each do |this_case| %>
+        <tr>
+          <td><%= link_to_case_title(this_case, 25) %></td>
+          <td><small><%= display_updated_at(this_case) %></small></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

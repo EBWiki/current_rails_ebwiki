@@ -79,7 +79,7 @@ if State.count.zero?
     ]
 
   states.each do |state|
-    State.create(state)
+    State.create!(state)
   end
 end
 
@@ -96,6 +96,26 @@ if Ethnicity.count.zero?
   ]
 
   ethnicities.each do |ethnicity|
-    Ethnicity.create(title: ethnicity[0])
+    Ethnicity.create!(title: ethnicity[0])
+  end
+
+  if Case.count.zero?
+    puts 'Creating Cases...'
+    cases = [
+      { title: 'Elijah McClain', state: State.where(name:'Colorado').first },
+      { title: 'Niani Finlayson', state: State.where(name:'California').first },
+      { title: 'George Floyd', state: State.where(name:'Minnesota').first },
+      { title: 'Jayland Walker', state: State.where(name:'Ohio').first },
+      { title: 'Tyre Nichols', state: State.where(name:'Tennessee').first },
+      { title: 'Eddie Irizarry', state: State.where(name:'Pennsylvania').first },
+      { title: 'Eric Garner', state: State.where(name:'New York').first },
+      { title: 'Fanta Bility', state: State.where(name:'Pennsylvania').first },
+      { title: 'Jim Rogers', state: State.where(name:'Pennsylvania').first },
+      { title: 'Breonna Taylor', state: State.where(name:'Kentucky').first }
+    ]
+
+    cases.each do |this_case|
+      Case.create!(this_case)
+    end
   end
 end

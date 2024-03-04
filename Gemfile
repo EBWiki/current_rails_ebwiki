@@ -39,13 +39,25 @@ gem 'redis', '>= 4.0.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
+gem 'activerecord-pg_enum'
 gem 'brakeman'
 gem 'bundler-audit'
+gem 'cocoon'
+gem 'devise'
+gem 'dotenv-rails'
+gem 'geocoder'
+gem 'mini_magick'
+gem 'momentjs-rails'
+gem 'paper_trail'
+gem 'paper_trail-association_tracking'
+gem 'pundit'
+gem 'simple_form'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'bullet'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails'
